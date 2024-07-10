@@ -9,8 +9,8 @@ function FloatingIcon() {
       className="z-40 rounded-full mr-5 mb-2 pr-1 pb-1"
       style={{
         position: "fixed",
-        bottom: "20px", // Change this value according to your preference
-        right: "20px", // Change this value according to your preference
+        bottom: "20px",
+        right: "20px",
       }}
     >
       <div className="fixed top-1/2 right-0 transform -translate-y-1/2 bg-white shadow-lg rounded-l-lg p-2">

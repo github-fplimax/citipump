@@ -61,6 +61,10 @@ const Header: React.FC = () => {
               <List size={32} weight="thin" />
             </button>
           </div>
+          <div className="absolute bottom-0 left-0 w-full">
+            <div className="border-b-2 border-red-500"></div>
+            {/* <div className="border-b-2 border-black"></div> */}
+          </div>
         </div>
       </header>
 
@@ -84,11 +88,23 @@ const Header: React.FC = () => {
                   <X size={32} weight="thin" />
                 </button>
               </div>
-              <a
+              {/* <a
                 href="#product"
                 className="text-black hover:text-red-500 transition-all"
               >
                 Product
+              </a> */}
+              <a
+                href="#mobile"
+                className="text-black hover:text-red-500 transition-all"
+              >
+                Mobile Concrete Pump
+              </a>
+              <a
+                href="#stationary"
+                className="text-black hover:text-red-500 transition-all"
+              >
+                Stationary Concrete Pump
               </a>
               <a
                 href="#portfolio"

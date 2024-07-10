@@ -2,33 +2,8 @@
 
 import React, { useState } from "react";
 import { X, CaretDoubleDown } from "@phosphor-icons/react";
+import { testimonials } from "..";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Bapak Tono (Project Contractor)",
-    image: "/Bapak Tono.png",
-    text: '"Pompa Betonnya bagus dan secara servis memuaskan. Dan pastinya akan pakai pompa dari Citipump lagi"',
-  },
-  {
-    id: 2,
-    name: "Bapak Asep (Project Contractor)",
-    image: "/Bapak Asep.png",
-    text: '"Kualitas dan harganya sangat baik dibanding kompetitor yang lain."',
-  },
-  {
-    id: 3,
-    name: "Ibu Anita (Project Owner)",
-    image: "/Ibu Anita.png",
-    text: '"Saya tau Citipump dari Tokopedia dan reviewnya bagus-bagus. Yang jelas puas banget, ini orderan saya yang kedua dan yang pertama tuh hasilnya bagus banget"',
-  },
-  {
-    id: 4,
-    name: "Bapak Hairuddin (Project Owner)",
-    image: "/Bapak Hairuddin.png",
-    text: '"Timnya tangguh dan mesinnya semua lengkap, kerjasama dan komunikasi yang terjalin sangat baik sehingga mempermudah proyek untuk selesai."',
-  },
-];
 
 const TestimonialSection: React.FC = () => {
   const [showAllTestimonials, setShowAllTestimonials] = useState(false);
@@ -43,9 +18,9 @@ const TestimonialSection: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-8">
           What Our Clients Have To Say
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials
-            .slice(0, showAllTestimonials ? testimonials.length : 2)
+            .slice(0, showAllTestimonials ? testimonials.length : 3)
             .map((testimonial) => (
               <div
                 key={testimonial.id}
@@ -54,25 +29,26 @@ const TestimonialSection: React.FC = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="mx-auto rounded-full w-24 h-24 mb-4"
+                  className="mx-auto rounded-full w-28 h-28 mb-4"
                 />
-                <h3 className="text-lg font-semibold text-center mb-2">
+                <h3 className="text-lg font-semibold text-center">
                   {testimonial.name}
                 </h3>
-                <p className="text-gray-700 text-center">{testimonial.text}</p>
+                <p className="text-gray-700 italic text-center my-2">{testimonial.text}</p>
+                <p className="text-gray-700 text-sm text-center">{testimonial.projectLocation}</p>
               </div>
             ))}
         </div>
         <div className="text-center mt-6">
           <button
             onClick={handleReadMore}
-            className="text-gray-700 hover:text-gray-900"
+            className="px-4 py-2 text-red-500 hover:text-black transition-all"
           >
             {showAllTestimonials ? (
-              <X size={32} weight="thin" />
+              <X size={40} weight="thin" />
             ) : (
               <CaretDoubleDown
-                size={32}
+                size={40}
                 weight="thin"
                 className="animate-bounce"
               />

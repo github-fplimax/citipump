@@ -1,3 +1,5 @@
+import React from "react";
+
 const AboutSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-6 py-12 bg-gray-200">
@@ -10,7 +12,7 @@ const AboutSection = () => {
         </div>
       </div>
       <div className="w-full md:w-1/2 md:pl-12">
-        <h1 id="about" className="text-3xl font-bold mb-6 underline underline-offset-4" style={{ scrollMarginTop: '100px' }}>
+        <h1 id="about" className="text-3xl font-bold mb-6 underline underline-offset-4" style={{ scrollMargin: '100px' }}>
           Citi Pump Indonesia
         </h1>
         <p className="text-gray-700 mb-6">
